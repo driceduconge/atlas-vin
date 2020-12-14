@@ -1,0 +1,219 @@
+/*FONTS -> à enlever pr lowtech*/
+
+@font-face {
+  font-family: "Ortica";
+  src: url("fonts/Ortica-Light.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ortica";
+  src: url("fonts/Ortica-Bold.woff") format("woff");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SpaceText";
+  src: url("fonts/SpaceText-Medium.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* ---------------- VARIABLES ---------------- */
+
+:root{
+--wine :#0a0105; /* une sorte de bleu */
+--white: #d2d1c9; /* ivoire un peu  */
+--lie: rgb(108, 0, 70);
+}
+/* ---------------- GENERAL ---------------- */
+html{
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  -moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+html::-webkit-scrollbar{
+      display: none;  /* Safari and Chrome */
+}
+
+body{
+  background-color: var(--wine);
+}
+
+
+.clear{
+  position: fixed;
+  z-index: 3;
+  left:0%;
+  top:70%;
+  width:auto;
+  background-color:var(--white);
+  color:var(--lie);
+}
+.download{
+  position: fixed;
+  z-index: 3;
+  left:0%;
+  top:85%;
+  width:auto;
+  color:var(--lie);
+  background-color:var(--white);
+}
+.url{
+  font-size: 4vh;
+  padding: 0.5%;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-family: SpaceText;
+}
+.url:hover{
+  color:var(--white);
+  cursor: pointer;
+  background-color: var(--lie);
+}
+
+
+.listeleft{
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+text-justify: distribute;
+  line-height:85%;
+  padding-right: 2%;
+  position: absolute;
+  width:65%;
+  height:100%;
+  left:20px;
+  top:1px;
+  text-align: justify;
+  align-items: center;
+  overflow-y: auto;
+}
+.listeleft::-webkit-scrollbar{
+      display: none;  /* Safari and Chrome */
+}
+.listeleft>p{
+  font-size: 9.7vh;
+  font-family: Ortica, serif;
+  font-weight: normal;
+  line-height: 108%;
+  margin: 0px;
+}
+p.liste{
+  color:var(--lie);
+}
+.listeleft>p.liste:hover{
+  cursor: normal;
+}
+
+p.liste>a{
+  color:#c9bcc7;
+}
+.listeleft>p>a:hover{
+  color: var(--lie);
+  cursor: pointer;
+}
+
+.listeleft>p>a.listeb{
+  font-family: Ortica;
+  font-weight: bold;
+  color: var(--white);
+}
+.listeb:hover{
+  cursor:normal;
+}
+.listeleft>p>a.listeb:hover,.listeleft>p>a.titre:hover{
+  color: var(--white);
+}
+/* IMAGE */
+.content-img{
+  position: absolute;
+  width: 80vw;
+  height:auto;
+  top:0px;
+  left:0px;
+}
+.content-img:hover{
+}
+/* TEXTE */
+.content{
+}
+.content::-webkit-scrollbar{
+      display: none;  /* Safari and Chrome */
+}
+.content>.texte, .content>.image-paysage, .content>.image-portrait{
+}
+.content-text{
+  display: block;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding-right:1%;
+  right:1px;
+  width: 31%;
+  height:95%;
+  overflow-y: auto;
+  overflow-x:visible;
+  z-index: 99;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+p.medium-size,p.medium-ort-size,p.small-size,p.big-size{
+  text-align: right;
+  position: relative;
+  font-family: SpaceText, sans-serif;
+  padding: 0%;
+  padding-right: 0px;
+  height: auto;
+  color:var(--white);
+  margin: 0px;
+  margin-bottom:2%;
+}
+span{
+  background-color: var(--wine);
+}
+p.medium-size{
+
+  /*width: 110%;*/
+  font-size: 2vh;
+}
+p.medium-ort-size{
+
+  /*width: 80%;*/
+  font-family: Ortica, serif;
+  font-size: 3vh;
+}
+
+p.small-size{
+  font-size: 1.4vh;
+  margin: 0%;
+  padding: 0px;
+}
+
+p.big-size{
+  font-family: Ortica, serif;
+  margin: 0%;
+  padding: 0px;
+  font-size: 5vh;
+  text-align: center;
+
+  font-weight: bold;
+}
+/* ---------------- IMAGES ---------------- */
+
+.image-paysage{
+  position: fixed;
+  max-width:25vw;
+  height: auto;
+  /*content: url("./sources/elevage/paysage.jpg");*/
+}
+.image-portrait{
+  position: fixed;
+  max-height:25vw;
+  width: auto;
+  /*content: url("./sources/elevage/paysage.jpg");*/
+}
